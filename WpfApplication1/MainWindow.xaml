@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Compiler" Height="350" Width="848">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFB1B1F5" Offset="0"/>
+                <GradientStop Color="#FFF5F6F7" Offset="0.661"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <Button Content="Save..." HorizontalAlignment="Left" Margin="100,24,0,0" VerticalAlignment="Top" Width="74" Name="SaveButton" Click="SaveButton_Click" BorderBrush="#FF651DCD" Background="White" FontFamily="Trebuchet MS"/>
+        <Button Content="Open..." HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="75" Name="OpenButton" Click="OpenButton_Click" Background="#FFFBFBFB" BorderBrush="#FF791DCD" FontFamily="Trebuchet MS" Foreground="Black" BorderThickness="1" />
+        <GroupBox x:Name="ErrorReportsGB" Header="Error Reports" HorizontalAlignment="Left" Margin="476,62,0,0" VerticalAlignment="Top" Height="194" Width="342">
+            <StackPanel>
+                <ScrollViewer Height="108" Margin="10,10,10,0" Name="ErrorResultScrollViewer"/>
+
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Compiler" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top" Height="194" Width="447">
+            <StackPanel>
+                <RichTextBox x:Name="textBox" HorizontalAlignment="Left" Height="123" Margin="0,0,0,136" VerticalAlignment="Bottom" Width="425" FontFamily="Times New Roman" Block.LineHeight="6" FontSize="14">
+                    <FlowDocument>
+                        <Paragraph/>
+                    </FlowDocument>
+                </RichTextBox>
+                <Button Content="Compile..." HorizontalAlignment="Left" Height="25" Margin="0,-120,0,100"  VerticalAlignment="Bottom" Width="75" x:Name="CompileButton" Click="CompileButton_Click"/>
+            </StackPanel>
+</GroupBox>
+
+    </Grid>
+</Window>
