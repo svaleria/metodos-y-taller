@@ -136,6 +136,7 @@ namespace WpfApplication1
         }
         private void CompileButton_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("soy feo");
             ErrorResultScrollViewer.Content = string.Empty;
             try
             {
