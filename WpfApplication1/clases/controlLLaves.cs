@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApplication1
 {
-    class controlLLaves
+    public class controlLLaves
     {
         private List<int> entrada = new List<int>();
         private List<int> salida = new List<int>();

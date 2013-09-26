@@ -8,6 +8,20 @@ namespace WpfApplication1
 {
     public class Tokenizer
     {
+        List<String> tokens = new List<string>();
+        public Tokenizer(string stringLine, char character)
+        {
+            //var tokenList = stringLine.Split(character);
+            foreach (string token in stringLine.Split(character))
+            {
+                tokens.Add(token);
+            }
+        }
+
+        public List<string> getTokens()
+        {
+            return tokens;
+        }
         public List<string> separadorLineas(string cadena)
         {
             List<string> tokenizer = new List<string>();
